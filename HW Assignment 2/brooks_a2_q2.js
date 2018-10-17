@@ -16,4 +16,13 @@ var listPlanets = function () {
     }
 }
 
-listPlanets();
+// listPlanets();
+
+var num = window.prompt("Please enter a number between 1 and 8");
+
+if (1 <= num && num <= 8) {
+    listPlanets();
+} else {
+    alert("The value you entered is not within range. Please reload the page and enter a value thatis within 1 and 8, inclusive."); 
+    window.location.reload();
+}

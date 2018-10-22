@@ -5,10 +5,10 @@ var checked = document.getElementsByClassName('check');
 var close = document.getElementById('close');
 
 
-showfilter.addEventListener('click', function(){
-   document.getElementById('filterbar').style.width = '0px';
-   // document.getElementById('detailbar').style.display = "none";
-});
+// showfilter.addEventListener('click', function(){
+//    document.getElementById('filterbar').style.width = '0px';
+//    // document.getElementById('detailbar').style.display = "none";
+// });
 
 // close.addEventListener('click', function(){
 //    document.getElementById('detailbar').style.display = 'none';

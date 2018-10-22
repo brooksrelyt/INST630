@@ -1,5 +1,5 @@
 
-    var leafletMap = L.map('map').setView([36.18, -115.17], 10);
+    var leafletMap = L.map('map').setView([38.9936, -76.9538], 13);
 
     L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{
   maxZoom: 19,
@@ -16,7 +16,8 @@
     var tooltipmap = d3.select("#map").append("div").attr("class", "toolTipMap");
 
 
-    d3.csv('data/business_final_version.csv', function (error, dataset) {
+    // d3.csv('data/business_final_version.csv', function (error, dataset) {
+      d3.csv('data/yelp-fusion.csv', function (error, dataset) {
         if (error) throw error;
 
         dataset.forEach(function(d) {

@@ -99,7 +99,9 @@
 	bottom: 0;
 	}
 .leaflet-left {
-	right: 15;
+	left: 0;
+	/* override bc idk where class is */
+	right
 	}
 .leaflet-control {
 	float: left;

@@ -14,20 +14,20 @@ var close = document.getElementById('close');
 //    document.getElementById('detailbar').style.display = 'none';
 // });
 
-// reset.addEventListener('click', function(){
-//    document.getElementById('filterbar').style.width = '470px';
-//    var checked = document.getElementsByName('check');
-//    for (var i = 0; i < checked.length; i++) {
-//       if (document.getElementsByName("check")[i].checked) {
-//                document.getElementsByName("check")[i].checked = false;
-//            }
-//    }
+reset.addEventListener('click', function(){
+   document.getElementById('filterbar').style.width = '470px';
+   var checked = document.getElementsByName('check');
+   for (var i = 0; i < checked.length; i++) {
+      if (document.getElementsByName("check")[i].checked) {
+               document.getElementsByName("check")[i].checked = false;
+           }
+   }
 
-//    d3.selectAll('.circleMap').style("opacity", 1);
-//    d3.selectAll('.cir-star-selected').class('cir-star-selected', false);
-//    d3.selectAll('.cir-rev-selected').class('cir-rev-selected', false);
-//    d3.selectAll('.cir-cat-selected').class('cir-cat-selected', false);
-//    d3.selectAll('.selected-bar').class('selected-bar', false);
+   d3.selectAll('.circleMap').style("opacity", 1);
+   d3.selectAll('.cir-star-selected').class('cir-star-selected', false);
+   d3.selectAll('.cir-rev-selected').class('cir-rev-selected', false);
+   d3.selectAll('.cir-cat-selected').class('cir-cat-selected', false);
+   d3.selectAll('.selected-bar').class('selected-bar', false);
 
 
 });

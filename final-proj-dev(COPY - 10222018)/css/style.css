@@ -54,24 +54,6 @@ body{
     height: 100%;
     overflow: scroll;
 }
-.spaces {
-    padding: 1.5em;
-}
-
-.bold {
-    font-weight: bold;
-} 
-
-.location {
-    font-weight: bold;
-    text-transform: uppercase; 
-    color: #666;
-    letter-spacing: 1px;
-    font-size: 10px;
-    line-height: 13px;
-    margin-bottom: 5px;
-    margin-left: 20px;
-}
 
 #intro, #svg-container{
     height: 100%;
@@ -188,11 +170,8 @@ nav img{
     font-weight: bold;
     text-transform: uppercase;
     /*width: 300px;*/
-    margin: 0 0 0 20px;
+    margin: 30px 0 0 20px;
     color: #d64a4a;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #e1e1e1;
 }
 
 #reset {

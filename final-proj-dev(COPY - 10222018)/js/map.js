@@ -24,10 +24,10 @@ d3.json("../data/circles.json", function(collection) {
   var feature = g.selectAll("circle")
     .data(collection.objects)
     .enter().append("circle")
-    .style("stroke", "blue")  
+    .style("stroke", "black")  
     .style("opacity", .6) 
-    .style("fill", "blue")
-    .attr("r", 10);  
+    .style("fill", "red")
+    .attr("r", 20);  
   
   map.on("viewreset", update);
   update();

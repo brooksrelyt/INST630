@@ -69,39 +69,3 @@ d3.json("../data/yelp-fusion.json", function(collection) {
     )
   }
 })  
-
-
-//////////////////////////////////// -----------------------------------------------------------------
-// var svg = d3.select("body")
-//   .append("svg")
-//   .attr("width",300)
-//   .attr("height",300);
-  
-// var tooltip = d3.select("body").append("div")
-//   .attr("class", "tooltip")
-//   .style('opacity', 0)
-//   .style('position', 'absolute')
-//   .style('padding', '0 10px');
-  
-// svg.selectAll("circle") // empty selection
-//   .data(pointsData)     // data to bind to selection
-//   .enter()              // the enter selection holds new elements in the selection
-//   .append("circle")     // append a circle for each new element
-//   // Manage the style of each circle based on its datum:
-//   .attr("cx",function(d) { return d.location[0]; })
-//   .attr("cy",function(d) { return d.location[1]; })
-//   .attr("r",10)
-//   .on("mouseover", function(d) {
-//     tooltip.transition()
-//       .style('opacity', .9)
-//       .style('background', 'steelblue')
-//       .text("Business: " + d.businessName + ". performance " + d.performance)
-//       .style('left', (d3.event.pageX - 35) + 'px')
-//       .style('top', (d3.event.pageY - 30) + 'px')
-//       .duration(100);
-//   })
-//   .on("mouseout",function(d) {
-//      tooltip.transition()
-//        .style("opacity", "0")
-//        .duration(50);
-//   })

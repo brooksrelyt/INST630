@@ -8,9 +8,8 @@
   <body>
     <div>
       <h2>Tax and Tip Calculator</h2>
-      <form id="tip_form_03" method="POST" action="_mt_03.html">
         Base amount: <input type="text" name="base_amount" id="BASE"> USD<br/><br/>
-        Tax percentage: <select name="tax_percentage" id="TXP"> 
+        Tax percentage: <select name="tax_percentage" id="TXP" onblur="checkTax()"> 
           <option>3</option>
           <option>4</option>
           <option>5</option>
@@ -20,21 +19,20 @@
           <option>9</option>
           <option>10</option>
         </select>%<br/><br/>
-        Tip percentage: <select name="tip_percentage" id="TPP">
+        Tip percentage: <select name="tip_percentage" id="TPP" onblur="checkTip()">
             <option>5</option>
             <option>7</option>
             <option>10</option>
             <option>15</option>
             <option>10</option>
             </select>%<br/><br/>
-        <input type="submit" id="Go" value="Calculate!">
-      </form>
+        <input type="submit" onclick="applyTax();" id="Go" value="Calculate!">
       <p id="base_a"></p>
       <p id="tax_a"></p>
       <p id="tip_a"></p>
       <p id="tot_a"></p>
     </div>
     <script src="utilities.js"></script>
-    <script src="_mt_03.js"></script> 
+    <script src="brooks_mt_03.js"></script> 
   </body>
 </html>

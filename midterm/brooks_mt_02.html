@@ -9,8 +9,8 @@
     <div>
       <h2>Tax and Tip Calculator</h2>
         Base amount: <input type="text" name="base_amount" id="BASE"> USD<br/><br/>
-        Tax percentage: <input type="text" name="tax_percentage" id="TXP"> %<br/><br/>
-        Tip percentage: <input type="text" name="tip_percentage" id="TPP"> %<br/><br/>
+        Tax percentage: <input type="text" name="tax_percentage" id="TXP" onblur="checkTax()"> %<br/><br/>
+        Tip percentage: <input type="text" name="tip_percentage" id="TPP" onblur="checkTip()"> %<br/><br/>
         <input type="submit" onclick="applyTax();" id="Go" value="Calculate!">
       <p id="base_a"></p>
       <p id="tax_a"></p>

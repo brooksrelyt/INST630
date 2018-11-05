@@ -625,7 +625,7 @@ nav img{
     height: 100vh;
     overflow: hidden;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
     /*z-index: -1;*/
 }
 
@@ -643,8 +643,6 @@ nav img{
     font-size: 21px;
     font-weight: bold;
     text-transform: uppercase;
-    /*width: 300px;*/
-    margin: 0 0 0 20px;
     color: #d64a4a;
     padding-bottom: 15px;
     margin-bottom: 15px;
@@ -655,19 +653,19 @@ nav img{
     width: 70px;
     height: 20px;
     float: right;
-    margin: 10px 20px 0 0;
     border: none;
     border-radius: 5px;
     color: #d64a4a;
-    font-family: 'latoregular';
     font-size: 13px;
     background-color:rgba(255, 255, 255, 0.8);
     transition: 0.5s;
+    cursor: pointer;
 }
 
 #reset:hover {
     color: #fff;
     background-color: #d64a4a;
+    cursor: pointer;
 }
 
 
@@ -701,7 +699,7 @@ nav img{
     margin-top: 10px;
 }
 
-#f-t-l h2, #f-t-r h2, #f-b h2, #detailbar h2 {
+.filter h2 {
     font-size: 13px;
     font-weight: bold;
     text-transform: uppercase;

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Q4 - Book recommender">
+    <title>Q4 - Book recommender</title>
+  </head>
+  <body>
+    <div>
+      <h2>Book Recommender</h2>
+      <form id="book_form" method="POST" action="_mt_04.html">
+          <p id="agePara">Would you like a book for children or adults? </p>
+          <select name="age_group" id="AG">
+            <option>--- Make selection ---</option> 
+            <option>Children</option>
+            <option>Adults</option>
+            </select><br/><br/>
+            <p id="genPara">Select age group above</p>
+            <select name="genre" id="GN">
+                <option id=gen1>--- Select age group first---</option> 
+                <option id=gen2></option>
+                <option id=gen3></option>
+            </select><br/><br/>
+          
+        </form>
+    <p id="recom"></p>
+    </div>
+    <script src="utilities.js"></script>
+    <script src="_mt_04.js"></script> 
+  </body>
+</html>

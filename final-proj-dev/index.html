@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Final Project (DEV)</title>
     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/leaflet.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -13,70 +14,160 @@
     <div id="svg-container">
         <div id="map"></div>
         <div id="filterbar" class="spaces">
-            <header>
-                <button type="button" id="reset" onclick="initialBoxs()">RESET</button>
-                <p class="bold location">College Park, MD</p>
-                <h1>Hunger-de-fusion</h1>
-            </header>
+            <div class="row">
+                <div class="col">
+                    <header>
+                        <button type="button" id="reset" onclick="initialBoxs()">RESET</button>
+                        <p class="bold location">College Park, MD</p>
+                        <h1>Hunger-de-fusion</h1>
+                    </header>
+                </div>
+            </div>
 
-            <div id="f-t-l">
-                <h2>Star Rating</h2>
-                <div id="star-filter">
-                    <div class="boxes">
-                        <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="c5" name="check" checked/>
-                        <label for="c5"><img src="img/5star.png"></label>
-                    </div>
-                    <div class="boxes">
-                        <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="c4" name="check"/>
-                        <label for="c4"><img src="img/4star.png"></label>
-                    </div>
-                    <div class="boxes">
-                        <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="c3" name="check"/>
-                        <label for="c3"><img src="img/3star.png"></label>
-                    </div>
-                    <div class="boxes">
-                        <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="c2" name="check"/>
-                        <label for="c2"><img src="img/2star.png"></label>
-                    </div>
-                    <div class="boxes">
-                        <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="c1" name="check"/>
-                        <label for="c1"><img src="img/star.png"></label>
+            <div class="row space filter">
+                <div class="col">
+                    <h2>Star Rating</h2>
+                    <div id="star-filter">
+                        <div class="boxes">
+                            <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="c5" name="check" checked/>
+                            <label for="c5"><img src="img/5star.png"></label>
+                        </div>
+                        <div class="boxes">
+                            <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="c4" name="check"/>
+                            <label for="c4"><img src="img/4star.png"></label>
+                        </div>
+                        <div class="boxes">
+                            <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="c3" name="check"/>
+                            <label for="c3"><img src="img/3star.png"></label>
+                        </div>
+                        <div class="boxes">
+                            <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="c2" name="check"/>
+                            <label for="c2"><img src="img/2star.png"></label>
+                        </div>
+                        <div class="boxes">
+                            <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="c1" name="check"/>
+                            <label for="c1"><img src="img/star.png"></label>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="f-t-r">
-                <h2>Review Count</h2>
-                <div id="review-filter">
-                    <div class="r-list">
-                        <div class="boxes">
-                            <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> 1 - 100
-                            <label for="r8"></label>
+            <div class="row space filter">
+                <div class="col">
+                    <h2>Review Count</h2>
+                    <div id="review-filter">
+                        <div class="r-list">
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> 1 - 25
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r7" name="check"/> 26 - 50
+                                <label for="r7"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r6" name="check"/> 51 - 75
+                                <label for="r6"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r5" name="check"/> 76 - 100
+                                <label for="r5"></label>
+                            </div>
                         </div>
-                        <div class="boxes">
-                            <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r7" name="check"/> 100 - 200
-                            <label for="r7"></label>
-                        </div>
-                        <div class="boxes">
-                            <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r6" name="check"/> 300 - 400
-                            <label for="r6"></label>
-                        </div>
-                        <div class="boxes">
-                            <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r5" name="check"/> 500 - 750
-                            <label for="r5"></label>
+                        <div class="r-list">
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r4" name="check"/> 101 - 200
+                                <label for="r4"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r3" name="check"/> 201 - 300
+                                <label for="r3"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r2" name="check"/> 301 - 400
+                                <label for="r2"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r1" name="check"/> 401+
+                                <label for="r2"></label>
+                            </div>
                         </div>
                     </div>
-                    <div class="r-list">
-                        <div class="boxes">
-                            <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r4" name="check"/> 750 - 1000
-                            <label for="r4"></label>
-                        </div>
-                        <div class="boxes">
-                            <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r3" name="check"/> 1000 - 1500
-                            <label for="r3"></label>
-                        </div>
-                        <div class="boxes">
-                            <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r2" name="check"/> 1500 - 2000
-                            <label for="r2"></label>
+                </div>
+            </div>
+            <div class="row space filter">
+                <div class="col">
+                    <h2>Category</h2>
+                    <div id="review-filter">
+                        <div class="r-list">
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(tck"/> Ramen
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Breakfast & Brunch
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Spanish
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Diners
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Delis
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Seafood
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Greek
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Coffee & Tea
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Mexican
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Jazz & Blues
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Juice Bars & Smoothies
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Latin American
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Korean
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Chicken Shop
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Taiwanese
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Indian
+                                <label for="r8"></label>
+                            </div>
+                            <div class="boxes">
+                                <input class="check" type="checkbox" onchange="toggleCheckbox(this)" value="None" id="r8" name="check"/> Caribbean
+                                <label for="r8"></label>
+                            </div>
+                               
                         </div>
                     </div>
                 </div>
@@ -84,12 +175,13 @@
         </div>
     </div>
 
-<!-- LIBRARIES -->
-<script type="text/javascript" src="js/d3.min.js"></script>
-<script type="text/javascript" src="js/leaflet0.7.7.js"></script>
+    <!-- LIBRARIES -->
+    <script type="text/javascript" src="js/d3.min.js"></script>
+    <script type="text/javascript" src="js/leaflet0.7.7.js"></script>
 
-<!-- Our JS -->
-<script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="js/map.js"></script>
+    <!-- Our JS -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/checkbox.js"></script>
 </body>
 </html>

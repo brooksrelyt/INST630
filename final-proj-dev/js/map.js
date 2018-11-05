@@ -40,6 +40,11 @@ d3.json("../data/yelp-fusion.json", function(collection) {
     .style("opacity", .6) 
     .style("fill", "blue")
     .attr("r", 10)
+
+    // possible solution
+    .attr("star-class", function(d){return d.star;})
+    .attr("review-class", function(d){return d.review_count;})
+
     .on("mouseover", function(d) {
       var html  = d.name + "<br><hr>" + "Star Rating: " + d.rating + "<br>" + "Total Review: " + d.review_count;
       tooltip.html(html)

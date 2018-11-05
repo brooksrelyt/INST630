@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Q3 - Tax and tip calculator 03">
+    <title>Q3 - Tax and tip calculator 03</title>
+  </head>
+  <body>
+    <div>
+      <h2>Tax and Tip Calculator</h2>
+      <form id="tip_form_03" method="POST" action="_mt_03.html">
+        Base amount: <input type="text" name="base_amount" id="BASE"> USD<br/><br/>
+        Tax percentage: <select name="tax_percentage" id="TXP"> 
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>%<br/><br/>
+        Tip percentage: <select name="tip_percentage" id="TPP">
+            <option>5</option>
+            <option>7</option>
+            <option>10</option>
+            <option>15</option>
+            <option>10</option>
+            </select>%<br/><br/>
+        <input type="submit" id="Go" value="Calculate!">
+      </form>
+      <p id="base_a"></p>
+      <p id="tax_a"></p>
+      <p id="tip_a"></p>
+      <p id="tot_a"></p>
+    </div>
+    <script src="utilities.js"></script>
+    <script src="_mt_03.js"></script> 
+  </body>
+</html>

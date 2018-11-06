@@ -2,7 +2,7 @@ document.getElementById('AG').onchange = function() {
 	var s = document.getElementById('AG');
     var children = s.options[s.selectedIndex].value;
 
- 	if (children == 1) {
+ 	if (children == '1') {
  		document.getElementById("genPara").innerHTML = "Would you like a Picture book or a Chapter book?";
  		document.getElementById("gen2").innerHTML = "Picture";
  		document.getElementById("gen3").innerHTML = "Chapter";

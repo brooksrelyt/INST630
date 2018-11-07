@@ -7,12 +7,15 @@ document.getElementById('AG').onchange = function() {
  		document.getElementById("genPara").innerHTML = "Would you like a Picture book or a Chapter book?";
  		document.getElementById("gen2").innerHTML = "Picture";
  		document.getElementById("gen3").innerHTML = "Chapter";
- 		recom.innerHTML = " ";
- 	} else {
+ 		// recom.innerHTML = " ";
+ 		document.getElementById('GN').selectedIndex = 0;
+ 	} else if (children == 2) {
  		document.getElementById("genPara").innerHTML = "Would you like a Fiction book or a Nonfiction book?";
  		document.getElementById("gen2").innerHTML = "Fiction";
  		document.getElementById("gen3").innerHTML = "Non-fiction";
  		recom.innerHTML = " ";
+ 		document.getElementById('GN').selectedIndex = 0;
+ 		alert('its 2');
  	}   
 };
 
@@ -26,4 +29,4 @@ function recomText(sel) {
 	else if ( sel.options[sel.selectedIndex].value == "3" ) {
 		recom.innerHTML = "I recommend 'The Secret Garden' by Frances Hodgson Burnett";
 	}
-} 
+}

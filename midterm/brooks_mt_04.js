@@ -1,15 +1,18 @@
 document.getElementById('AG').onchange = function() {
 	var s = document.getElementById('AG');
     var children = s.options[s.selectedIndex].value;
+    var recom = document.getElementById('recom');
 
  	if (children == 1) {
  		document.getElementById("genPara").innerHTML = "Would you like a Picture book or a Chapter book?";
  		document.getElementById("gen2").innerHTML = "Picture";
  		document.getElementById("gen3").innerHTML = "Chapter";
+ 		recom.innerHTML = " ";
  	} else {
  		document.getElementById("genPara").innerHTML = "Would you like a Fiction book or a Nonfiction book?";
  		document.getElementById("gen2").innerHTML = "Fiction";
  		document.getElementById("gen3").innerHTML = "Non-fiction";
+ 		recom.innerHTML = " ";
  	}   
 };
 

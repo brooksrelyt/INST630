@@ -4,6 +4,8 @@ function initialBoxs(){
     d3.selectAll('.circleMap').classed('cir-notslected', false);
 
     d3.selectAll(".selected-bar").classed("selected-bar",false);
+    // d3.selectAll("check").setAttribute("checked", "");
+    // var checked = document.getElementsByClassName('check')..setAttribute("checked", "");;
 
 }
 
@@ -13,7 +15,15 @@ function selectBoxs(target) {
 
     var ident = targetid.charAt(0);
 
+    // var multifilter = 0;
+    //
+    // d3.selectAll('.circleMap').each(
+    //     if(d3.select(this).classed('cir-cat-selected')){
+    //         multifilter = 1;
+    // });
+
     if(ident == 'c'){
+        // console.log(" target is the stars");
 
         var targetstar1 = targetid.charAt(1);
         var targetstar2 = targetid.charAt(1) +".5";
@@ -170,4 +180,8 @@ function unselectBoxs(target) {
 
 
     }
+
+
+    // d3.selectAll('.cir-star-selected.cir-rev-selected.cir-cat-selected').classed('cir-notslected', false);
+
 }

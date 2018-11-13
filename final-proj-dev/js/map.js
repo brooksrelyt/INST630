@@ -60,6 +60,8 @@ d3.json("../data/yelp-fusion.json", function(collection) {
         .duration(300) // ms
         .style("opacity", 0); // don't care about position!
     })
+
+    // .data(data.filter(function(d){return d.categories.title == category;}))
   
   map.on("viewreset", update);
   update();

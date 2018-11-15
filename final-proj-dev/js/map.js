@@ -41,9 +41,11 @@ d3.json("../data/yelp-fusion.json", function(collection) {
     .style("fill", "blue")
     .attr("r", 10)
 
-    // possible solution
-    .attr("star-class", function(d){return d.star;})
-    .attr("review-class", function(d){return d.review_count;})
+    // Adding classes directly from the JSON data to the svg circles to hopefully filter later
+    .attr("data-id", function(d){return d.id;})
+    .attr("data-star", function(d){return d.rating;})
+    .attr("data-review", function(d){return d.review_count;})
+    .attr("data-cat", function(d){return d.categories[0].title;})
 
     .on("mouseover", function(d) {
       var html  = d.name + "<br><hr>" + "Star Rating: " + d.rating + "<br>" + "Total Review: " + d.review_count;
@@ -60,8 +62,6 @@ d3.json("../data/yelp-fusion.json", function(collection) {
         .duration(300) // ms
         .style("opacity", 0); // don't care about position!
     })
-
-    // .data(data.filter(function(d){return d.categories.title == category;}))
   
   map.on("viewreset", update);
   update();

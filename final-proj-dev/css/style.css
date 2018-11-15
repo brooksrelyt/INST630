@@ -57,8 +57,16 @@ body{
     display: block;
 }
 
-
-
+.boxes label {
+    left: initial;
+     position: relative; 
+     width: auto; 
+    height: 13px;
+    top: 0;
+    left: 0;
+    margin: 2px 0 0 4px;
+    border-radius: 5px;
+}
 
 
 

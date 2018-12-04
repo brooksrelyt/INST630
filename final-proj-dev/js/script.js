@@ -29,11 +29,13 @@ $('#star-filter').delegate('input[type=checkbox]', 'change', function() {
 	$checked = $('input:checked');	
 	if ($checked.length) {							
 		var selector = '';
-		$($checked).each(function(index, element){
-			selector += "[data-star~='" + element.value + "']";     
+		var selector2 = '';
+		$($checked).each(function(index, element, element2){
+			selector += "[data-star~='" + element.value + "']";  
+			selector2 += "[data-star~='" + element2.datavaluetwo + "']";   
 		});                        
 		$list.hide();
-		$('.leaflet-zoom-animated > g > circle').filter(selector).show();
+		$('.leaflet-zoom-animated > g > circle').filter('selector, selector2').show();
 	}
 	else {
 		$list.show();
